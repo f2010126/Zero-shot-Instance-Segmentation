@@ -118,3 +118,5 @@ work_dirs/
 results/
 # Pytorch
 *.pth
+/checkpoints
+/results
