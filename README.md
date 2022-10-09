@@ -27,7 +27,7 @@ python setup.py develop
 ## Dataset prepare
 
 
-- Download the train and test annotations files for zsi from [annotations](https://drive.google.com/drive/folders/1TLbmDoRiKcMGq1zyVahXtGVTdkvI9Dus?usp=sharing), put all json label file to
+- Download the train and test annotations files for zsi from [annotations](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/data/coco/annotations), put all json label file to
     ```
     data/coco/annotations/
     ```
@@ -57,14 +57,14 @@ python setup.py develop
     + **ZSI task**:
 
         - 48/17 split ZSI task:
-            - download [48/17](https://drive.google.com/file/d/1MMDcNWHjTTOaPvMYVlypMIXdvdOcSnao/view?usp=sharing) ZSI model, put it in checkpoints/ZSI_48_17.pth
+            - download [48/17](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/checkpoints) ZSI model, put it in checkpoints/ZSI_48_17.pth
             
             - inference:
                 ```
                 chmod +x tools/dist_test.sh
                 ./tools/dist_test.sh configs/zsi/48_17/test/zsi/zero-shot-mask-rcnn-BARPN-bbox_mask_sync_bg_decoder.py checkpoints/ZSI_48_17.pth 4 --json_out results/zsi_48_17.json
                 ```
-            - our results zsi_48_17.bbox.json and zsi_48_17.segm.json can also downloaded from [zsi_48_17_reults](https://drive.google.com/drive/folders/1ZoFP2ihGhgbVdzagC0M9AVUlXAMmYGRO?usp=sharing).
+            - our results zsi_48_17.bbox.json and zsi_48_17.segm.json can also downloaded from [zsi_48_17_reults](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/results).
             - evaluate:
                 - for zsd performance
                     ```
@@ -75,14 +75,14 @@ python setup.py develop
                     python tools/zsi_coco_eval.py results/zsi_48_17.segm.json --ann data/coco/annotations/instances_val2014_unseen_48_17.json --types segm
                     ```
         - 65/15 split ZSI task:
-            - download [65/15](https://drive.google.com/file/d/1UZMNQ9a9Gpbn53JGPilzyjl1oiFYyPw5/view?usp=sharing) ZSI model, put it in checkpoints/ZSI_65_15.pth
+            - download [65/15](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/checkpoints) ZSI model, put it in checkpoints/ZSI_65_15.pth
             
             - inference:
                 ```
                 chmod +x tools/dist_test.sh
                 ./toools/dist_test.sh configs/zsi/65_15/test/zsi/zero-shot-mask-rcnn-BARPN-bbox_mask_sync_bg_65_15_decoder_notanh.py checkpoints/ZSI_65_15.pth 4 --json_out results/zsi_65_15.json
                 ```
-            - our results zsi_65_15.bbox.json and zsi_65_15.segm.json can also downloaded from [zsi_65_15_reults](https://drive.google.com/drive/folders/1ZoFP2ihGhgbVdzagC0M9AVUlXAMmYGRO?usp=sharing).
+            - our results zsi_65_15.bbox.json and zsi_65_15.segm.json can also downloaded from [zsi_65_15_reults](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/results).
             - evaluate:
                 - for zsd performance
                     ```
@@ -102,7 +102,7 @@ python setup.py develop
                 chmod +x tools/dist_test.sh
                 ./tools/dist_test.sh configs/zsi/48_17/test/gzsi/zero-shot-mask-rcnn-BARPN-bbox_mask_sync_bg_decoder_gzsi.py checkpoints/ZSI_48_17.pth 4 --json_out results/gzsi_48_17.json
                 ```
-            - our results gzsi_48_17.bbox.json and gzsi_48_17.segm.json can also downloaded from [gzsi_48_17_results](https://drive.google.com/drive/folders/1ZoFP2ihGhgbVdzagC0M9AVUlXAMmYGRO?usp=sharing).
+            - our results gzsi_48_17.bbox.json and gzsi_48_17.segm.json can also downloaded from [gzsi_48_17_results](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/results).
             - evaluate:
                 - for gzsd
                     ```
@@ -119,7 +119,7 @@ python setup.py develop
                 chmod +x tools/dist_test.sh
                 ./tools/dist_test.sh configs/zsi/65_15/test/gzsi/zero-shot-mask-rcnn-BARPN-bbox_mask_sync_bg_65_15_decoder_notanh_gzsi.py checkpoints/ZSI_65_15.pth 4 --json_out results/gzsi_65_15.json
                 ```
-            - our results gzsi_65_15.bbox.json and gzsi_65_15.segm.json can also downloaded from [gzsi_65_15_results](https://drive.google.com/drive/folders/1ZoFP2ihGhgbVdzagC0M9AVUlXAMmYGRO?usp=sharing).
+            - our results gzsi_65_15.bbox.json and gzsi_65_15.segm.json can also downloaded from [gzsi_65_15_results](https://dagshub.com/f2010126/Zero-shot-Instance-Segmentation/src/main/results).
             - evaluate:
                 - for gzsd
                     ```
