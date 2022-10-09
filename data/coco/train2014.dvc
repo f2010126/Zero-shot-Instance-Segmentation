@@ -1,0 +1,5 @@
+outs:
+- md5: 71311c645500b3e22ccc3de34a55e491.dir
+  size: 13492512057
+  nfiles: 82783
+  path: train2014
